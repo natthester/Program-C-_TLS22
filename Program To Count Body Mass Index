@@ -1,0 +1,53 @@
+// Program To Count Body Mass Index
+
+#include <iostream>
+using namespace std;
+
+
+int main () {
+	     //deklarasi variabel
+	     int gender;
+	     float weight, height, BMI, meter, broca;
+	     
+	     cout <<"Program to count Body Mass Index" << endl;
+	     cout <<"--------------------------------" <<endl;
+	     
+	     cout <<"1. Male"<<endl;
+		 cout <<"2. Female"<<endl;
+		 
+		 cout << "Please input your gender (1) or (2) :";
+		 
+		 cin >> gender;
+		 cout << "Please input your weight (kg) : ";
+		 cin >> weight;
+		 cout << "Please input your height (cm) : ";
+		 cin >> height;
+		 
+		 meter = height/100;
+		 BMI = (weight / (meter*meter));
+		 
+		 cout << "BMI : "<<BMI<<" ";
+		 
+		 if (BMI <18,5){
+		 cout << "(underweight, you should eat more!)"<<endl;
+	}else if (BMI <=24,9){
+		cout << "(normal, keep the good lifestyle!)"<<endl;
+	}else if (BMI <29,9){
+		cout << "(overweight, start to control your dietary habit!)"<<endl;
+	}else {
+		cout << "(Obesity, start to exercise and diet!)"<<endl;
+	}
+	
+	switch (gender){
+		case 1 : broca=((height-100)-(0.10*(height-100))); break;
+		case 2 : broca=((height-100)-(0.15*(height-100))); break;
+		default : broca=0;
+	}
+	
+	if (gender==1 or gender==2){
+		int result = (int)broca;
+		cout << "Your ideal weight based on Broca Formula :" <<result<<"KG"<<endl;
+	}
+	
+	
+}
